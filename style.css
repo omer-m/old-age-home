@@ -1,0 +1,767 @@
+/* primary color set in variable  */
+:root {
+    --primary-color: #456e8d;
+    /* pimarry colour but with opicty/alpha 0.5 */
+    --primary-color-alpha: #456e8d79;
+
+    --secondary-color: #1bc4cb;
+
+    --ternary-color: #5e7597;
+
+
+}
+
+
+
+body {
+    overflow-x: hidden;
+}
+
+header {
+    background: #fff;
+
+
+    .navbar {
+        padding-top: 13px;
+        padding-bottom: 13px;
+        padding-left: 58px;
+        padding-right: 58px;
+    }
+
+    .navbar-brand img {
+        max-height: 100px;
+    }
+
+    .navbar-light .navbar-nav .nav-link {
+        margin: 0 1.37em;
+        padding: .618em 0;
+        font-weight: 700;
+        font-size: 17px;
+        letter-spacing: 0.1em;
+        text-transform: uppercase;
+        color: #000;
+        text-decoration: none;
+    }
+
+    .sidebar {
+        height: 100%;
+        width: 0;
+        position: fixed;
+        z-index: 1;
+        top: 0;
+        right: 0;
+        background-color: var(--primary-color);
+        overflow-x: hidden;
+        transition: 0.5s;
+        padding-top: 60px;
+
+    }
+
+    .sidebar a {
+        padding: 8px 8px 8px 32px;
+        text-decoration: none;
+        font-size: 25px;
+        color: #f1f1f1;
+        display: block;
+        transition: 0.3s;
+    }
+
+    .sidebar a:hover {
+        color: #f1f1f1;
+    }
+
+    .sidebar .closebtn {
+        position: absolute;
+        top: 0;
+        right: 25px;
+        /* Adjust close button to the right */
+        font-size: 36px;
+        margin-left: 50px;
+    }
+
+}
+
+footer {
+
+    padding-top: 3rem;
+    background-color: #d9d9d9;
+    color: #000000;
+
+
+    .footer-logo-col {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+    }
+
+    a {
+        text-decoration: none;
+        color: #000000;
+    }
+
+    h5 {
+        font-size: 1.4rem;
+        margin-bottom: 1rem;
+        font-weight: 700;
+        line-height: 1.5;
+    }
+
+    li {
+        padding: 0.5rem 0;
+    }
+
+    i {
+        padding-right: 0.5rem;
+        font-style: normal;
+    }
+
+}
+
+.hero {
+    background-image: url(./assets/services/slider\ \(1\).jpg);
+    object-fit: cover;
+    width: 100%;
+    background-size: 111vw 82vh;
+    height: 750px;
+    background-repeat: no-repeat;
+}
+
+.home-main {
+
+    /* Main styling */
+
+    text-align: center;
+
+    /* Hero section styling */
+    .home-hero {
+        position: relative;
+        background-image: url('assets/home/img_2.jpg');
+        background-size: cover;
+        background-position: center;
+        height: 100vh;
+
+        display: flex;
+        justify-content: center;
+        align-items: center;
+
+        /* Text overlay styling */
+        .home-hero-text {
+            position: absolute;
+            color: var(--primary-color);
+            text-align: center;
+            max-width: 80%;
+            background-color: rgba(202, 196, 196, 0.5);
+            /* Optional: Add background for better text visibility */
+            padding: 20px;
+            border-radius: 10px;
+        }
+
+        .home-hero-text h1 {
+            font-size: 3em;
+            /* Adjust font size as needed */
+        }
+
+        .home-hero-text p {
+            font-size: 1.5em;
+            /* Adjust font size as needed */
+        }
+
+    }
+
+    .home-intro {
+        margin: 1rem;
+        padding: 2rem 3rem;
+
+        .featured {
+            position: relative;
+            display: inline-block;
+            padding: 5px 15px;
+            color: var(--primary-color);
+        }
+
+        .featured:before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            border-radius: 4px;
+            background-color: var(--primary-color);
+            opacity: 0.15;
+        }
+
+    }
+
+    .home-service {
+
+        /* Apply styles to the first .row only */
+        .container .row {
+            justify-content: center;
+        }
+
+        /* Bootstrap overrides and custom styles */
+        .card.service-card {
+            border: 1px solid var(--ternary-color);
+            /* Use ternary color for the border */
+            border-radius: 10px;
+            /* Rounded corners */
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+            /* Light shadow */
+            overflow: hidden;
+            display: flex;
+            flex-direction: column;
+            height: 100%;
+            /* Ensure cards stretch to the full height of their container */
+            transition: transform 0.3s ease, border-color 0.3s ease, box-shadow 0.3s ease, color 0.3s ease;
+            /* Smooth transition for hover effect */
+        }
+
+        .card.service-card:hover {
+            transform: translateY(-5px);
+            /* Slight move up effect */
+            border-color: var(--primary-color);
+            /* Change border color on hover */
+            box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
+            /* Enhance shadow on hover */
+        }
+
+
+        .card.service-card:hover .service-icon i {
+            color: var(--ternary-color);
+            /* Change icon color on hover */
+        }
+
+        .card.service-card:hover .card-title {
+            color: var(--secondary-color);
+            /* Change text color on hover */
+        }
+
+        .service-icon {
+            background-color: var(--primary-color);
+            /* Primary color background */
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            flex: 1 0 auto;
+            /* Allow the icon to take its own space */
+            transition: background-color 0.3s ease;
+            /* Smooth transition for background color */
+        }
+
+        .service-icon i {
+            font-size: 3em;
+            /* Adjust the size as needed */
+            color: var(--secondary-color);
+            /* Secondary color for the icon */
+            transition: color 0.3s ease, text-shadow 0.3s ease;
+            /* Smooth transition for icon color and glow */
+        }
+
+        .service-content {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            text-align: center;
+            background-color: #fff;
+            /* White background */
+            flex: 1 0 auto;
+            /* Allow the content to take its own space */
+        }
+
+        .service-content .card-title {
+            margin: 0;
+            font-size: 1.5em;
+            /* Adjust font size as needed */
+            color: var(--primary-color);
+            /* Primary color for text */
+            transition: color 0.3s ease;
+            /* Smooth transition for text color */
+        }
+
+
+    }
+
+}
+
+
+.breadcrumb-banner {
+    position: relative;
+    height: 20vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: white;
+    /* background: rgba(0, 0, 0, 0.5); Fallback for older browsers */
+
+    /* Background Image */
+    background-image: url("assets/breadcrumb-bg2.png");
+    background-size: cover;
+    background-position: center;
+
+
+    .container-fluid {
+        position: relative;
+        z-index: 2;
+        /* Ensure the text content is above the overlay */
+        /* top: 30px; */
+    }
+
+    .breadcrumb {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        background-color: unset;
+    }
+
+    .breadcrumb a {
+        text-decoration: none;
+        color: white;
+    }
+
+}
+
+.breadcrumb-banner::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: var(--primary-color-alpha);
+    /* Overlay with opacity */
+    z-index: 1;
+    /* Ensure the overlay is behind the text */
+}
+
+
+.about-main {
+
+    .about-hero {
+        position: relative;
+        background-image: url('assets/about/about-hero.png');
+        background-size: cover;
+        background-position: center;
+        height: 60vh;
+
+        display: flex;
+        justify-content: center;
+        align-items: center;
+
+
+
+        .pre-title {
+            font-size: 1.2em;
+            color: white;
+            text-transform: uppercase;
+            letter-spacing: 2px;
+            margin-bottom: 1rem;
+        }
+
+        .title {
+            font-size: 2.5em;
+            font-weight: bold;
+            margin-bottom: 2rem;
+            color: white;
+        }
+
+        p {
+            font-size: 1.1em;
+            max-width: 800px;
+            margin: 0 auto;
+            color: white;
+            margin-bottom: 1.5rem;
+        }
+
+
+        .btn {
+            padding: 0.857rem 2.571rem;
+            font-size: 1.143rem;
+            border-radius: 2.143rem;
+            font-weight: 600;
+            box-shadow: 0 0.5rem 1rem rgb(16, 16, 16);
+            outline: 2px solid var(--ternary-color);
+            outline-offset: 0px;
+            border: none;
+            cursor: pointer;
+            background: var(--ternary-color);
+            transition: all .3s ease-in-out;
+            color: white;
+        }
+
+        .btn:hover {
+            outline-offset: .2rem;
+        }
+
+        @media (max-width: 576px) {
+            height: 100vh;
+        }
+
+    }
+
+    .about-intro {
+        background-color: #f4f1ec;
+        padding: 3rem 0;
+
+        .about-intro-text-col {
+            display: flex;
+            flex-direction: column;
+
+            align-items: flex-end;
+
+        }
+
+        .about-intro-text {
+
+            max-width: 80%;
+            text-align: left;
+
+            .text-title {
+                font-size: 47px;
+                line-height: 3rem;
+                letter-spacing: 3px;
+                text-transform: uppercase;
+            }
+
+            .horizontal-line {
+                margin-top: 2rem;
+                margin-bottom: 3rem;
+                border-top: 2px solid rgb(0 0 0);
+
+            }
+
+            .subtext {
+                font-size: 1rem;
+            }
+        }
+
+        @media (max-width: 575.98px) {
+            .about-intro-text {
+                max-width: 100%;
+                text-align: left;
+                padding: 2rem 0;
+
+                .text-title {
+                    font-size: 40px;
+                }
+
+                .horizontal-line {
+                    margin: 0.8rem 0;
+                }
+            }
+        }
+    }
+
+    .about-counter {
+
+        background-color: var(--primary-color);
+        padding: 2rem 0;
+
+
+        .four {
+            margin-bottom: 1rem;
+        }
+
+        .counter-box {
+            display: block;
+            background: var(--secondary-color);
+            padding: 20px 10px 16px;
+            text-align: center
+        }
+
+        .counter-box p {
+            margin: 5px 0 0;
+            padding: 0;
+            color: white;
+            font-size: 18px;
+            font-weight: 500
+        }
+
+        .counter-box i {
+            font-size: 60px;
+            margin: 0 0 15px;
+            color: white
+        }
+
+        .counter {
+            display: block;
+            font-size: 32px;
+            font-weight: 700;
+            color: white;
+            line-height: 28px
+        }
+
+        .counter-box.colored {
+            background: var(--secondary-color);
+        }
+
+        .counter-box.colored p,
+        .counter-box.colored i,
+        .counter-box.colored .counter {
+            color: #fff
+        }
+    }
+
+    .about-banner {
+        .about-banner-image {
+            img {
+                height: 30vh;
+                width: 100%;
+            }
+        }
+    }
+
+    .about-mission-vision-values {
+        position: relative;
+        background: url("./assets/about/about-banner4.jpg") no-repeat center center;
+        background-size: cover;
+        z-index: 0;
+
+
+        height: 50vh;
+        align-content: flex-end;
+
+        @media (max-width: 768px) {
+
+            height: unset;
+
+        }
+
+        /* The overlay */
+        &::before {
+            content: "";
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: var(--primary-color-alpha);
+            /* The overlay color */
+            z-index: 1;
+            /* Above the background, below the content */
+        }
+
+        /* The content */
+        .about-mission-vision-values-content {
+            position: relative;
+            z-index: 2;
+            /* Above the overlay */
+            padding: 2rem 0;
+
+
+            .card {
+                margin-bottom: 1.5rem;
+                border: none;
+                box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+                transition: transform 0.3s, box-shadow 0.3s;
+
+                &:hover {
+                    transform: translateY(-10px);
+                    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
+                }
+
+                .card-body {
+                    padding: 1.5rem;
+
+                    .card-title {
+                        font-size: 1.5rem;
+                        margin-bottom: 1rem;
+                        color: var(--primary-color);
+                    }
+
+                    .card-text {
+                        font-size: 1rem;
+                        color: #333;
+                        margin-bottom: 1.5rem;
+                    }
+
+                    .btn {
+                        background-color: var(--primary-color);
+                        color: white;
+                        border: none;
+                        padding: 0.75rem 1.5rem;
+                        border-radius: 0.25rem;
+                        transition: background-color 0.3s;
+
+                        &:hover {
+                            background-color: var(--ternary-color);
+                            color: white;
+                        }
+                    }
+                }
+            }
+        }
+    }
+
+    .about-testimonials {
+        padding: 3rem 0;
+        background-color: #f4f1ec;
+
+        .about-testimonials-title-wrapper {
+            text-align: center;
+            margin-bottom: 2rem;
+
+            .about-testimonials-title {
+                font-size: 2.5rem;
+                text-transform: uppercase;
+                line-height: 4rem;
+                letter-spacing: 3px;
+            }
+
+            .horizontal-line {
+                width: 50%;
+                margin: 0.5rem auto;
+                border-top: 2px solid rgba(0, 0, 0, 0.3);
+            }
+        }
+
+        .testimonial-cards {
+            padding: 2rem 0;
+
+            .testimonial-card {
+                height: 100%;
+                display: flex;
+                flex-direction: column;
+                justify-content: center;
+                align-items: center;
+                margin-bottom: 1.5rem;
+                background-color: white;
+                border-radius: 10px;
+                box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+                padding: 1.5rem;
+                transition: transform 0.3s, box-shadow 0.3s;
+
+                &:hover {
+                    transform: translateY(-10px);
+                    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
+                }
+
+                .testimonial-card-body {
+                    display: flex;
+                    flex-direction: column;
+                    justify-content: center;
+                    align-items: center;
+                    text-align: center;
+
+                    .testimonial-text {
+                        font-size: 1rem;
+                        color: #333;
+                        margin-bottom: 1.5rem;
+                        height: 120px;
+                        /* Ensures consistent text height */
+                        overflow: hidden;
+                    }
+
+                    img {
+                        border-radius: 50%;
+                        object-fit: cover;
+                        margin-bottom: 1rem;
+                    }
+
+                    .testimonial-name,
+                    .testimonial-city {
+                        margin-top: 4px;
+                        font-size: 1rem;
+                        color: var(--primary-color);
+                    }
+                }
+            }
+        }
+
+        @media (max-width: 575.98px) {
+            .about-testimonials-title-wrapper {
+
+                margin-bottom: 0rem;
+
+
+                .about-testimonials-title {
+                    font-size: 2rem;
+                    text-transform: uppercase;
+                    line-height: 3rem;
+                    letter-spacing: 3px;
+                }
+            }
+
+            top:0rem;
+            left:0rem
+        }
+
+        @media (min-width: 576px) and (max-width: 767.98px) {
+            top: 0rem;
+            left: 0rem
+        }
+
+        @media (min-width: 768px) and (max-width: 991.98px) {
+            .testimonial-cards {
+                .col-sm-12 {
+                    margin-bottom: 1rem;
+                }
+            }
+        }
+
+        @media (min-width: 992px) {
+            .testimonial-cards {
+                .col-sm-12 {
+                    margin-bottom: 1.5rem;
+                }
+            }
+        }
+    }
+
+
+}
+
+
+.service-main {
+
+
+    .home-slider .carousel {
+        height: 80vh;
+        /* background-color: var(--primary-color-alpha); */
+    }
+
+    .home-slider .carousel img {
+        height: 80vh;
+        width: 100%;
+        object-fit: fill;
+    }
+
+    .service-cards {
+        padding: 1rem;
+        margin-top: -10rem;
+
+        .card {
+
+            padding: 1.875rem;
+            background-color: var(--primary-color);
+            text-align: center;
+            margin-bottom: 1rem;
+
+
+            .fa {
+                font-size: 3rem;
+                color: white;
+                margin-bottom: 10px;
+            }
+
+            h2 {
+                font-size: 1.5rem;
+                font-weight: bold;
+                margin-bottom: 10px;
+            }
+
+            p {
+                font-size: 1rem;
+                color: white;
+            }
+
+
+        }
+
+    }
+
+
+
+
+
+}

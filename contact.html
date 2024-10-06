@@ -1,0 +1,158 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Secure Caring Hand</title>
+  <!-- favicon -->
+  <link rel="icon" type="image/png" href="assets/logo/SCH-logo-1.png">
+
+  <!-- bootsrrap cnd -->
+
+  <!-- Bootstrap CSS -->
+  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+  <!-- Slick CSS -->
+  <link rel="stylesheet" type="text/css"
+    href="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.8.1/slick.min.css" />
+  <link rel="stylesheet" type="text/css"
+    href="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.8.1/slick-theme.min.css" />
+
+  <!-- Font Awsome -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css"
+    integrity="sha512-SnH5WK+bZxgPHs44uWIX+LLJAJ9/2PkPKZ5QiAj6Ta86w+fsb2TkcmfRyVX3pBnMFcV7oQPJkl9QevSCWr3W6A=="
+    crossorigin="anonymous" referrerpolicy="no-referrer" />
+
+  <!-- style.css -->
+  <link rel="stylesheet" href="style.css">
+
+
+</head>
+
+<body>
+
+  <header>
+    <nav class="navbar navbar-expand-lg navbar-light bg-white" role="navigation">
+      <div class="container-fluid">
+        <a class="navbar-brand" href="./index.html">
+          <img src="assets/logo/SCH-logo-1.png" alt="SHC Logo">
+        </a>
+        <button class="navbar-toggler" type="button" onclick="openNav()">
+          <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarNav">
+          <ul class="navbar-nav ml-auto">
+            <li class="nav-item">
+              <a class="nav-link" href="./index.html">Home</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="./about.html">About</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="services.html">Services</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="contact.html">Contact</a>
+            </li>
+          </ul>
+        </div>
+      </div>
+    </nav>
+
+    <!-- Sidebar -->
+    <div id="mySidebar" class="sidebar" role="navigation">
+      <a href="javascript:void(0)" class="closebtn" onclick="closeNav()">&times;</a>
+      <a href="./index.html">Home</a>
+      <a href="./about.html">About</a>
+      <a href="./services.html">Services</a>
+      <a href="./contact.html">Contact</a>
+    </div>
+
+  </header>
+
+  <main>
+    
+  </main>
+
+  <!-- Footer -->
+  <footer class="footer">
+    <div class="container">
+      <div class="row">
+        <!-- First Column: Logo and Address -->
+        <div class="col-md-4 mb-4">
+          <a href="./index.html" class="navbar-brand ">
+            <img src="./assets/logo/SCH-logo-1.png" class="mb-4" alt="Logo" height="90">
+          </a>
+          <address>
+            <h5>Secure Caring Hand Limited</h5>
+            London, UK<br>
+          </address>
+        </div>
+        <!-- Second Column: Menu -->
+        <div class="col-md-4 mb-4">
+          <h5>Menu</h5>
+          <ul class="list-unstyled">
+            <li><a href="./index.html">Home</a></li>
+            <li><a href="./about.html">About</a></li>
+            <li><a href="./services.html">Services</a></li>
+            <li><a href="./contact.html">Contact</a></li>
+          </ul>
+        </div>
+        <!-- Third Column: Contact Us -->
+        <div class="col-md-4 mb-4">
+          <h5>Contact Us</h5>
+          <ul class="list-unstyled">
+            <li><i class="fas fa-phone"></i> <i href="">+44 7540 221575</i></li>
+            <li><i class="fas fa-envelope"></i> <a href="mailto:info@example.com">info@securecaringhand.com</a></li>
+            <li>
+              <i class="fas fa-globe"></i> Follow us: <br><br>
+              <a href="https://www.facebook.com/"><i class="fab fa-facebook-f"></i></a>
+              <a href="https://x.com/"><i class="fab fa-twitter"></i></a>
+              <a href="https://www.instagram.com"><i class="fab fa-instagram"></i></a>
+            </li>
+          </ul>
+        </div>
+      </div>
+      <div class="row">
+        <div class="col-md-12 text-center">
+          <p>© 2024 Secure Caring Hand | All Rights Reserved</p>
+        </div>
+      </div>
+    </div>
+  </footer>
+
+
+  <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+  <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.bundle.min.js"></script>
+  <!-- Slick JS -->
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.8.1/slick.min.js"></script>
+  <script>
+
+
+    $(document).ready(function () {
+      $('.carousel').slick({
+        dots: true,
+        infinite: true,
+        speed: 800,
+        slidesToShow: 1,
+        slidesToScroll: 1,
+        autoplay: true,
+        autoplaySpeed: 3000,
+        arrows: false
+      });
+    });
+    function openNav() {
+      document.getElementById("mySidebar").style.width = "250px";
+    }
+
+    function closeNav() {
+      document.getElementById("mySidebar").style.width = "0";
+    }
+
+  </script>
+</body>
+
+
+
+</html>
