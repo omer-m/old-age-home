@@ -116,7 +116,7 @@ html {
     color: var(--clr-white);
     background-color: var(--clr-primary);
   }
-
+ 
   /* Focus */
   :focus,
   :focus-visible {

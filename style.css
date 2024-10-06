@@ -118,10 +118,10 @@ footer {
 }
 
 .hero {
-    background-image: url('assets/about/about-hero.png');
+    background-image: url('assets/home/hero.png');
     object-fit: cover;
     width: 100%;
-    background-size: 111vw 82vh;
+    background-size: 100vw 100vh;
     height: 750px;
     background-repeat: no-repeat;
 }
