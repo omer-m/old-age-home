@@ -118,7 +118,7 @@ footer {
 }
 
 .hero {
-    background-image: url(./assets/services/slider\ \(1\).jpg);
+    background-image: url('assets/about/about-hero.png');
     object-fit: cover;
     width: 100%;
     background-size: 111vw 82vh;
